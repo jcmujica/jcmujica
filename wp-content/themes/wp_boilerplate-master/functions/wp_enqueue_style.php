@@ -22,15 +22,11 @@ function dl_enqueue_style() {
 	wp_register_style( 'flexslider', get_theme_file_uri( '/assets/css/flexslider.css'), null, '2.7.1', 'screen' );
 	wp_register_style( 'flickity', get_theme_file_uri( '/assets/css/flickity.css'), null, '2.1.0', 'screen' );
 	wp_register_style( 'main_style', get_theme_file_uri( '/assets/css/style.css'), null, $theme_data->get( 'Version' ), 'screen' );
-
-
-
-
-
-
+	wp_register_style( 'Bootstrap_CSS', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
 	wp_register_style( 'Font_Awesome', 'https://use.fontawesome.com/releases/v5.2.0/css/all.css' );
 	wp_register_style( 'PagePiling_CSS', 'https://cdn.rawgit.com/alvarotrigo/pagePiling.js/master/jquery.pagepiling.css' );
-	wp_register_style( 'Bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' );
+
+
 
 
 
@@ -42,11 +38,11 @@ function dl_enqueue_style() {
 	if ( $theme_options['slider']['flickity'] ) {
 		wp_enqueue_style( 'flickity' );
 	}
-
+	wp_enqueue_style('Bootstrap_CSS');
 	wp_enqueue_style( 'main_style' );
 	wp_enqueue_style('Font_Awesome');
 	wp_enqueue_style('PagePiling_CSS');
-	wp_enqueue_style('Bootstrap');
+	
 
 
 }
