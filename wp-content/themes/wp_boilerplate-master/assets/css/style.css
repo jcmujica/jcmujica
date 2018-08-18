@@ -1,0 +1,173 @@
+@media (max-width: 768px) {
+	h1 a {
+		font-size: 0.8em;
+	}
+}
+
+@media (max-width: 517px) {
+	h1 a {
+		font-size: 0.6em;
+	}
+}
+
+body {
+	font-family: 'Share Tech Mono', monospace;
+	color: #444649;
+}
+
+.main-body {
+	background-color: #111;
+	color: #EEE;
+	height: 100vh;
+}
+
+
+
+/* Color por defecto de la barra de navegacion */
+
+.navbar-default .navbar-nav li a {
+	color: white;
+	font-size: 18px;
+}
+
+/*.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #F94889;
+}
+*/
+.navbar-default .navbar-nav > li > .nav-home > a:hover {
+    font-weight: bold;
+}
+
+/* Definiendo colores para cada seccion */
+#nav-home:hover, #nav-home:focus  {
+    color: white;
+    outline:0;
+    font-weight: bold;
+}
+
+#nav-about:hover, #nav-about:focus  {
+    color: #F94889;
+    outline:0;
+    font-weight: bold;
+}
+
+#nav-projects:hover, #nav-projects:focus {
+    color: #a6e22d;
+    outline:0;
+    font-weight: bold;
+}
+
+#nav-blog:hover, #nav-blog:focus {
+    color: #fd8a20;
+    outline:0;
+    font-weight: bold;
+}
+
+#nav-contact:hover, #nav-contact:focus {
+    color: #61c2e4;
+    outline:0;
+    font-weight: bold;
+}
+
+/* Al agregar ID: Cambiar los links de color base al cambiar de pagina */
+#bright a {
+	color: #282828;
+}
+
+
+.navbar-default {
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+	color: green;
+}
+
+
+.navbar-default .navbar-toggle {
+	
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	
+}
+
+.title-container {
+	border: solid 2px;
+	text-align: center;
+	max-width: 90%;
+}
+
+.title {
+	font-size: 2em;
+	padding: 15px;
+	text-align: center;
+}
+
+.bot-footer {
+	text-align: center;
+	bottom: 0;
+	position: absolute;
+	right: 10px;
+}
+
+
+h1 a {
+	text-decoration: none;
+	color: #fff;	
+}
+
+.inactiveLink {
+   pointer-events: none;
+   cursor: default;
+}
+
+p {
+	margin-top: 100px;
+}
+
+.about-section h1 {
+	color: #F94889;
+	font-weight: bold;
+	font-size: 60px;
+	text-align: right;
+}
+
+.about-section {
+	text-align: justify;
+}
+
+.black {
+	color: black;
+	display: inline-block;
+}
+
+p {
+	margin-top: 0;
+}
+
+.about-image {
+	float: right;
+	max-width: 400px;
+}
+
+.sec-projects h1 {
+	color: #a6e22d;
+}
+
+.sec-projects p {
+	color: white;
+}
+
+.project-image {
+	display: inline-block;
+	max-width: 300px;
+	margin-bottom: 10px;
+}
+
+.far {
+	font-size: 	4em;
+	color: black;
+}
