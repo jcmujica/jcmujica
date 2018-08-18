@@ -161,6 +161,8 @@ p {
 	color: white;
 }
 
+/*Using inline-block*/
+
 .project-image {
 	display: inline-block;
 	max-width: 300px;
