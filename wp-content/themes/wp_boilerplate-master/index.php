@@ -54,7 +54,8 @@
 				</div>
 			</div>	
 			<div class="col-md-offset-1 col-md-4 ">
-					<img class="about-image" src="assets/img/avatar.png" alt="">
+					<img class="about-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/avatar.png" alt="">
+
 			</div>
 				<div class="col-md-5">
 					
@@ -81,19 +82,41 @@
 					<h1>Proyectos</h1>
 				</div>			
 				<div class="col-md-offset-2 col-md-8">
-					<img class="project-image" src="assets/img/verde.png" alt="">
-					<img class="project-image" src="assets/img/azul.png" alt="">
-					<img class="project-image" src="assets/img/verde.png" alt="">
-					<img class="project-image" src="assets/img/azul.png" alt="">
-					<img class="project-image" src="assets/img/verde.png" alt="">
-					<img class="project-image" src="assets/img/azul.png" alt="">
+					<img class="project-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/verde.png" alt="">
+					<img class="project-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/azul.png" alt="">
+					<img class="project-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/verde.png" alt="">
+					<img class="project-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/azul.png" alt="">
+					<img class="project-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/verde.png" alt="">
+					<img class="project-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/azul.png" alt="">
 				</div>
 			</div>
 						
 		</div>
 		<div class="section" id="section-blog">
 			<div class="col-md-offset-1 col-md-7">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor odit placeat repellendus fugiat voluptas unde quasi, eligendi ea reprehenderit, nulla facere animi magni distinctio quos minus. Laborum nihil, quo dolorum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non saepe eius porro adipisci tempore, quos quibusdam tenetur doloribus! Iste veniam tempore tempora ratione fugiat, eveniet, voluptatibus amet earum cum doloribus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, dolore ea minus inventore eius, possimus veritatis, saepe amet repudiandae adipisci reprehenderit non unde. Nihil reprehenderit amet veritatis sit. Fugit, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iure quisquam exercitationem, sint eligendi nostrum dolorum ex veritatis fuga ducimus impedit ipsum, provident ad vero ipsam similique eveniet. Ipsa, itaque.</p>
+				
+				<?php
+						$arg = array(
+							'post_type'		 => 'blog',
+							'category_name'	 => '',
+							'posts_per_page' => 1,
+							'offset'		 => 0,
+							'post__not_in'	 => array($post->ID),
+							'paged'			 => $paged
+						);
+					
+						$get_arg = new WP_Query( $arg );
+					
+						while ( $get_arg->have_posts() ) {
+							$get_arg->the_post();
+						?>
+							
+							<!-- Content -->
+					
+						<?php } wp_reset_postdata();
+					?>
+
+
 			</div>			
 		</div>
 		<div class="section" id="section-cntct">
