@@ -14,7 +14,7 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand" href="#">
-						<img class="navbar_img" src="assets/img/logo.png" alt="">
+						<img class="navbar_img" src="" alt="">
 					</a>
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -53,23 +53,34 @@
 					<h1><div class="black">&#62;</div>Acerca de mí</h1>
 				</div>
 			</div>	
-			<div class="col-md-offset-1 col-md-4 ">
-					<img class="about-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/avatar.png" alt="">
+			<div class="col-md-offset-1 col-md-3 ">
+					<img class="about-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/avatar.svg" alt="">
+					<div class="about-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facere, sapiente est officiis dignissimos, adipisci nobis? Possimus impedit officiis eos soluta, perferendis, esse, voluptatem perspiciatis sed minima omnis, delectus accusamus.</div>
 
 			</div>
-				<div class="col-md-5">
+				<div class="col-md-7">
 					
 
-					<div class="row">
-						<div class="col-md-2">
-							<i class="far fa-clone"></i>
-						</div>
-						<div class="col-md-10">
-							<p>Diseño Responsivo</p>	
-						</div>
-					</div>						
-					<div class="row"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor odit placeat repellendus fugiat voluptas unde quasi, eligendi ea reprehenderit, nulla facere animi magni distinctio quos minus. Laborum nihil, quo dolorum! Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></div>						
-					<div class="row"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor odit placeat repellendus fugiat voluptas unde quasi, eligendi ea reprehenderit, nulla facere animi magni distinctio quos minus. Laborum nihil, quo dolorum! Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></div>						
+					<div class="skill-list">
+						<ul>
+							<li>
+								<i class="fas fa-expand-arrows-alt"></i>
+								<div class="skill-txt">Hago Diseño Responsivo</div>
+							</li>
+							<li>
+								<i class="fas fa-space-shuttle"></i>
+								<div class="skill-txt">Me gusta el contenido dinámico, agrego movimiento a tu página web</div>
+							</li>
+							<li>
+								<i class="far fa-lightbulb"></i>
+								<div class="skill-txt">Tengo preferencia por el desarrollo intuitivo y fácil de usar.</div>
+							</li>
+							<li>
+								<i class="fas fa-bolt"></i>
+								<div class="skill-txt">Optimizo la de velocidad de carga</div>
+							</li>
+						</ul>
+					</div>				
 					
 
 				</div>
@@ -82,12 +93,33 @@
 					<h1>Proyectos</h1>
 				</div>			
 				<div class="col-md-offset-2 col-md-8">
-					<img class="project-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/verde.png" alt="">
-					<img class="project-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/azul.png" alt="">
-					<img class="project-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/verde.png" alt="">
-					<img class="project-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/azul.png" alt="">
-					<img class="project-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/verde.png" alt="">
-					<img class="project-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/azul.png" alt="">
+
+				<?php
+					$arg = array(
+						'post_type'		 => 'project',
+						'posts_per_page' => 6
+					);
+				
+					$get_arg = new WP_Query( $arg );
+				
+					while ( $get_arg->have_posts() ) {
+						$get_arg->the_post();
+					?>
+						
+				<!-- Content -->
+				<article class="project">
+					<a href="<?php the_permalink() ?>">
+						<?php the_post_thumbnail('full', array('class' => 'project__img')) ?>
+						<div class="project__content">
+							<h3 class="project__title">hola</h3>
+							<time datetime="<?php the_time('Y-m-d') ?>"><?php the_time('d \d\e F \d\e Y') ?></time>
+							<p class="projet__text">Esto es una prueba de contenido</p>
+						</div>
+					</a>
+				</article>
+				
+					<?php } wp_reset_postdata();
+				?>
 				</div>
 			</div>
 						

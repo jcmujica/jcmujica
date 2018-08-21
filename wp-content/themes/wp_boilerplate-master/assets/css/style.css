@@ -147,8 +147,8 @@ p {
 }
 
 .about-image {
-	float: right;
-	max-width: 400px;
+	
+	max-width: 100%;
 }
 
 .sec-projects h1 {
@@ -167,7 +167,27 @@ p {
 	margin-bottom: 10px;
 }
 
-.far {
-	font-size: 	4em;
+.far, .fas {
+	font-size: 1.2em;
 	color: black;
+	margin-right: 10px;
+}
+
+.skill-list li {
+	list-style-type: none;
+	font-size: 1.5em;
+	padding-bottom: 10px;
+}
+
+.skill-txt {
+	display: inline-block;
+}
+
+.about-desc {
+	display: block;
+}
+
+.about-image {
+	display: block;
+
 }
