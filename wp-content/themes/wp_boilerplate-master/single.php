@@ -32,7 +32,17 @@
 				</nav>
 			</div>
 		</nav>
+		<?php $id = get_the_ID(); 
+			echo $post_id;
+		?>
 
+
+
+			
+			
+
+
+		 
 
 		<?php the_post(); ?>
 

@@ -14,16 +14,16 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand" href="#">
-						<img class="navbar_img" src="" alt="">
+						<span class="main-logo" id="logo-text">JCMujica.com</span>
 					</a>
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul id="myMenu" class="nav navbar-nav navbar-right">
 						<li><a id="nav-home" href="#goto-home">Home</a></li>
-						<li><a id="nav-about" href="#goto-about">Acerca</a></li>
-						<li><a id="nav-projects" href="#goto-projects">Proyectos</a></li>
+						<li><a id="nav-about" href="#goto-about">About</a></li>
+						<li><a id="nav-projects" href="#goto-projects">Projects</a></li>
 						<li><a id="nav-blog" href="#goto-blg">Blog</a></li>
-						<li><a id="nav-contact" href="#goto-cntct">Contacto</a></li>
+						<li><a id="nav-contact" href="#goto-cntct">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -36,48 +36,48 @@
 			<div class="row">
 				<div class="title-container container-fluid title col-md-offset-2 col-md-8">
 					<h1 class="title">
-						<a href="" class="typewrite inactiveLink" data-period="2000000" data-type='[ " &ltDesarrollador Front-End/>" ]'>
+						<a href="" class="typewrite inactiveLink" data-period="20000000" data-type='[ " &ltFront-End Developer/>" ]'>
 	  					</a>	
 					</h1>
 				</div>
 			</div>
-
-			<div class="bot-footer">	
-				JCMujica.com All Rights Reserved
-			</div>	
 		</div>
 
 		<div class="section about-section" id="section-about">
 			<div class="row">
 				<div class="col-md-offset-5 col-md-5">
-					<h1><div class="black">&#62;</div>Acerca de mí</h1>
+					<h1>About me</h1>
 				</div>
 			</div>	
-			<div class="col-md-offset-1 col-md-3 ">
+			<div class="col-md-offset-2 col-md-3 ">
 					<img class="about-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/avatar.svg" alt="">
-					<div class="about-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facere, sapiente est officiis dignissimos, adipisci nobis? Possimus impedit officiis eos soluta, perferendis, esse, voluptatem perspiciatis sed minima omnis, delectus accusamus.</div>
-
-			</div>
-				<div class="col-md-7">
 					
+			</div>
+				<div class="col-md-5">
+					
+					<div class="about-desc">
+						<h2>¿Who is JCMujica?</h2>
+						<p>I'm a Venezuelan Electronic Engineer - Computers with experience in customer support and knowledge in the areas of IT, Front-End Development, and various programming languages. I also have an advanced level of written and spoken English. I currently live in Santiago, Chile.</p>
+					</div>
 
 					<div class="skill-list">
 						<ul>
+							<h2>Skills and Abilities</h2>
 							<li>
-								<i class="fas fa-expand-arrows-alt"></i>
-								<div class="skill-txt">Hago Diseño Responsivo</div>
+								<div class="skill-txt">
+								Responsive Design<i class="fas fa-expand-arrows-alt"></i></div>
 							</li>
 							<li>
-								<i class="fas fa-space-shuttle"></i>
-								<div class="skill-txt">Me gusta el contenido dinámico, agrego movimiento a tu página web</div>
+								<div class="skill-txt">
+								Animated Development<i class="fas fa-space-shuttle"></i></div>
 							</li>
 							<li>
-								<i class="far fa-lightbulb"></i>
-								<div class="skill-txt">Tengo preferencia por el desarrollo intuitivo y fácil de usar.</div>
+								<div class="skill-txt">
+								Preference for intuitive and simple UI<i class="far fa-lightbulb"></i></div>
 							</li>
 							<li>
-								<i class="fas fa-bolt"></i>
-								<div class="skill-txt">Optimizo la de velocidad de carga</div>
+								<div class="skill-txt">
+								High loadign speeds for websites<i class="fas fa-bolt"></i></div>
 							</li>
 						</ul>
 					</div>				

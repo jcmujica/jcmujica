@@ -177,14 +177,20 @@ p {
 	list-style-type: none;
 	font-size: 1.5em;
 	padding-bottom: 10px;
+	text-align: right;
 }
+
+.skill-list h2 {
+	text-align: right;
+}
+
 
 .skill-txt {
 	display: inline-block;
 }
 
 .about-desc {
-	display: block;
+	text-align: right;
 }
 
 .about-image {
@@ -243,4 +249,8 @@ p {
 	float: left;
 	width: 300px;
 	height: 300px;
+}
+
+.main-logo {
+	color: white;
 }

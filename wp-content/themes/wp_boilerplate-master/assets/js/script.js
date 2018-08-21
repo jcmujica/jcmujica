@@ -47,7 +47,7 @@ function menuCss(nextIndex) {
 var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
-        this.loopNum = 1;
+        this.loopNum = 0;
         this.period = parseInt(period, 10) || 2000;
         this.txt = '';
         this.tick();
@@ -106,7 +106,7 @@ var TxtType = function(el, toRotate, period) {
     $('#pagepiling').pagepiling({
         menu: false,
         direction: 'vertical',
-        verticalCentered: true,
+        verticalCentered: false,
         sectionsColor: ['#282828', '#FFF', '#282828', '#FFF', '#282828'],
         anchors: ['goto-home', 'goto-about', 'goto-projects', 'goto-blg', 'goto-cntct'],
         scrollingSpeed: 700,
