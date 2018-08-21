@@ -92,7 +92,7 @@
 				<div class="col-md-offset-1 col-md-10">
 					<h1>Proyectos</h1>
 				</div>			
-				<div class="col-md-offset-2 col-md-8">
+				<div class="col-md-offset-1 col-md-10">
 
 				<?php
 					$arg = array(
@@ -107,21 +107,27 @@
 					?>
 						
 				<!-- Content -->
-				<article class="project">
-					<a href="<?php the_permalink() ?>">
-						<?php the_post_thumbnail('full', array('class' => 'project__img')) ?>
-						<div class="project__content">
-							<h3 class="project__title">hola</h3>
-							<time datetime="<?php the_time('Y-m-d') ?>"><?php the_time('d \d\e F \d\e Y') ?></time>
-							<p class="projet__text">Esto es una prueba de contenido</p>
-						</div>
-					</a>
-				</article>
-				
+				<div class="project-container">
+					<article class="project">
+						<a href="<?php the_permalink() ?>">
+							<?php the_post_thumbnail('site_post', array('class' => 'project__img')) ?>
+							<div class="project__content">
+								<div class="middle">
+									<div class="project-text">
+										<h3 class="project__title"> <?php the_title() ?> </h3>
+										<p class="project__excerpt"><?php the_excerpt() ?></p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</article>
+				</div>
 					<?php } wp_reset_postdata();
 				?>
 				</div>
+
 			</div>
+
 						
 		</div>
 		<div class="section" id="section-blog">
