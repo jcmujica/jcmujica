@@ -146,7 +146,7 @@
 
 				<?php
 					$arg = array(
-						'post_type'		 => 'blog',
+						'post_type'		 => 'blog_post',
 						'posts_per_page' => 6
 					);
 				
