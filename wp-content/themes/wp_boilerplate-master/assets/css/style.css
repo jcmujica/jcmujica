@@ -2,17 +2,34 @@
 	h1 a {
 		font-size: 0.8em;
 	}
+	.title a {
+		font-size: 0.8em;
+	}
 }
 
 @media (max-width: 517px) {
 	h1 a {
 		font-size: 0.6em;
 	}
+	.title a {
+		font-size: 0.5em;
+	}
 }
 
 body {
-	font-family: 'Share Tech Mono', monospace;
+	font-family: 'Ubuntu Mono', monospace;
 	color: #444649;
+}
+
+.abt-txt {
+	line-height: 2em;
+}
+
+.about-desc h2 {
+	text-align: right;
+	border-bottom: solid 3px #F94889;;
+	display: inline-block;
+
 }
 
 .main-body {
@@ -93,6 +110,7 @@ body {
 }
 
 .title-container {
+	margin-top: 40vh;
 	border: solid 2px;
 	text-align: center;
 	max-width: 90%;
@@ -111,8 +129,12 @@ body {
 	right: 10px;
 }
 
+.skill-underscore {
+	font-weight: bold;
+	color: #F94889;
+}
 
-h1 a {
+div a {
 	text-decoration: none;
 	color: #fff;	
 }
@@ -126,33 +148,40 @@ p {
 	margin-top: 100px;
 }
 
+
+h1 {
+	margin-top: 15vh;
+	font-size: 60px;
+	font-weight: bold;
+}
+
 .about-section h1 {
 	color: #F94889;
-	font-weight: bold;
-	font-size: 60px;
-	text-align: right;
+	margin-bottom: 30px;
+}
+
+.about-desc h2 {
+	margin-top: 0;
 }
 
 .about-section {
 	text-align: justify;
 }
 
-.black {
-	color: black;
-	display: inline-block;
-}
-
-p {
-	margin-top: 0;
-}
-
 .about-image {
-	
 	max-width: 100%;
 }
 
 .sec-projects h1 {
 	color: #a6e22d;
+}
+
+.sec-blog h1 {
+	color: #fd8a20;
+}
+
+.sec-contact h1 {
+	color: #61c2e4;
 }
 
 .sec-projects p {
@@ -175,22 +204,24 @@ p {
 
 .skill-list li {
 	list-style-type: none;
-	font-size: 1.5em;
 	padding-bottom: 10px;
-	text-align: right;
+	/*text-align: right;*/
 }
 
 .skill-list h2 {
-	text-align: right;
+	/*text-align: right;*/
+	font-size: 1.5em;
 }
 
+ul {
+	padding: 0;
+}
 
 .skill-txt {
 	display: inline-block;
 }
 
 .about-desc {
-	text-align: right;
 }
 
 .about-image {
@@ -214,11 +245,24 @@ p {
   transition: .5s ease;
   opacity: 0;
   position: relative;
-  /*top: 50%;
-  left: 50%;
-  transform: translate(-80%, -50%);
+  top: 50%;
+  left: 80%;
+  transform: translate(-80%, -150%);
   -ms-transform: translate(-50%, -50%);
-*/  text-align: center;
+  text-align: center;
+}
+
+.post_line {
+	height: 60px;
+	background-color: #282828;
+}
+
+.post_container {
+	margin: 50px;
+}
+
+.post_thumb {
+
 }
 
 .project-container:hover .project__img {
@@ -240,6 +284,27 @@ p {
 	color: white;
 }
 
+.project-text p {
+	margin: 0;	
+}
+
+.project a {
+	text-decoration: none;	
+}
+
+.project-text:hover {
+	color: #a6e22d;
+	font-style: bold;
+	text-decoration: none;
+	background-color: white;
+	opacity: 0.5;
+}
+
+.project__title:hover {
+	color: #a6e22d;
+	opacity: 1;
+}
+
 .about-section {
 	color: #282828;
 }
@@ -249,6 +314,7 @@ p {
 	float: left;
 	width: 300px;
 	height: 300px;
+	margin: 10px 10px;
 }
 
 .main-logo {

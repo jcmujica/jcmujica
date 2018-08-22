@@ -35,49 +35,53 @@
 		<div class="main-body section" id="section-home">
 			<div class="row">
 				<div class="title-container container-fluid title col-md-offset-2 col-md-8">
-					<h1 class="title">
+					<div class="title">
 						<a href="" class="typewrite inactiveLink" data-period="20000000" data-type='[ " &ltFront-End Developer/>" ]'>
 	  					</a>	
-					</h1>
+					</div>
 				</div>
 			</div>
 		</div>
 
 		<div class="section about-section" id="section-about">
 			<div class="row">
-				<div class="col-md-offset-5 col-md-5">
-					<h1>About me</h1>
+				<div class="col-md-offset-2 col-md-10">
+					<h1>/About me</h1>
 				</div>
 			</div>	
-			<div class="col-md-offset-2 col-md-3 ">
-					<img class="about-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/avatar.svg" alt="">
-					
+			<div class="col-md-offset-2 col-md-3 col-sm-3">
+					<img class="about-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/avatar.svg" alt="">		
 			</div>
 				<div class="col-md-5">
 					
 					<div class="about-desc">
-						<h2>¿Who is JCMujica?</h2>
-						<p>I'm a Venezuelan Electronic Engineer - Computers with experience in customer support and knowledge in the areas of IT, Front-End Development, and various programming languages. I also have an advanced level of written and spoken English. I currently live in Santiago, Chile.</p>
+						<h2>&gt; Who is JCMujica?</h2>
+						<div class="abt-txt">I'm a Venezuelan Electronic Engineer - Computers with experience in customer support and knowledge in the areas of IT, Front-End Development, and various programming languages. I also have an advanced level of written and spoken English. I currently live in Santiago, Chile.</div>
 					</div>
+
 
 					<div class="skill-list">
 						<ul>
 							<h2>Skills and Abilities</h2>
 							<li>
 								<div class="skill-txt">
-								Responsive Design<i class="fas fa-expand-arrows-alt"></i></div>
+									<span class="skill-underscore">_</span>
+								 Responsive Design</div>
 							</li>
 							<li>
 								<div class="skill-txt">
-								Animated Development<i class="fas fa-space-shuttle"></i></div>
+									<span class="skill-underscore">_</span>
+								Animated Development</div>
 							</li>
 							<li>
 								<div class="skill-txt">
-								Preference for intuitive and simple UI<i class="far fa-lightbulb"></i></div>
+									<span class="skill-underscore">_</span>
+								Preference for intuitive and simple UI</div>
 							</li>
 							<li>
 								<div class="skill-txt">
-								High loadign speeds for websites<i class="fas fa-bolt"></i></div>
+									<span class="skill-underscore">_</span>
+								High loadign speeds for websites</div>
 							</li>
 						</ul>
 					</div>				
@@ -89,8 +93,8 @@
 		</div>
 		<div class="section sec-projects" id="section-projects">
 			<div class="row">
-				<div class="col-md-offset-1 col-md-10">
-					<h1>Proyectos</h1>
+				<div class="col-md-offset-2 col-md-10">
+					<h1>/Proyectos</h1>
 				</div>			
 				<div class="col-md-offset-1 col-md-10">
 
@@ -130,37 +134,57 @@
 
 						
 		</div>
-		<div class="section" id="section-blog">
-			<div class="col-md-offset-1 col-md-7">
-				
+		<div class="section sec-blog" id="section-blog">
+
+
+
+<div class="row">
+				<div class="col-md-offset-2 col-md-10">
+					<h1>/Blog</h1>
+				</div>			
+				<div class="col-md-offset-1 col-md-10">
+
 				<?php
-						$arg = array(
-							'post_type'		 => 'blog',
-							'category_name'	 => '',
-							'posts_per_page' => 1,
-							'offset'		 => 0,
-							'post__not_in'	 => array($post->ID),
-							'paged'			 => $paged
-						);
-					
-						$get_arg = new WP_Query( $arg );
-					
-						while ( $get_arg->have_posts() ) {
-							$get_arg->the_post();
-						?>
-							
-							<!-- Content -->
-					
-						<?php } wp_reset_postdata();
+					$arg = array(
+						'post_type'		 => 'blog',
+						'posts_per_page' => 6
+					);
+				
+					$get_arg = new WP_Query( $arg );
+				
+					while ( $get_arg->have_posts() ) {
+						$get_arg->the_post();
 					?>
+						
+				<!-- Content -->
+				<div class="blog-container">
+					<article class="blog">
+						<a href="<?php the_permalink() ?>">
+							<?php the_post_thumbnail('site_post', array('class' => 'blog__img')) ?>
+							<div class="blog__content">
+								<div class="middle">
+									<div class="blog-text">
+										<h3 class="blog__title"> <?php the_title() ?> </h3>
+										<p class="blog__excerpt"><?php the_excerpt() ?></p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</article>
+				</div>
+					<?php } wp_reset_postdata();
+				?>
+				</div>
+
+			</div>
 
 
-			</div>			
+			
 		</div>
-		<div class="section" id="section-cntct">
-			<div class="col-md-offset-1 col-md-7">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor odit placeat repellendus fugiat voluptas unde quasi, eligendi ea reprehenderit, nulla facere animi magni distinctio quos minus. Laborum nihil, quo dolorum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non saepe eius porro adipisci tempore, quos quibusdam tenetur doloribus! Iste veniam tempore tempora ratione fugiat, eveniet, voluptatibus amet earum cum doloribus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, dolore ea minus inventore eius, possimus veritatis, saepe amet repudiandae adipisci reprehenderit non unde. Nihil reprehenderit amet veritatis sit. Fugit, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iure quisquam exercitationem, sint eligendi nostrum dolorum ex veritatis fuga ducimus impedit ipsum, provident ad vero ipsam similique eveniet. Ipsa, itaque.</p>
-			</div>			
+		<div class="section sec-contact" id="section-cntct">
+			<div class="col-md-offset-2 col-md-10">
+				<h1>/Contacto</h1>
+			</div>		
 		</div>
 	</div>
 
