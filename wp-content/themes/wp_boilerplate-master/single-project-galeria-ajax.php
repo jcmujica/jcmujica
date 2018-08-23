@@ -35,37 +35,45 @@
 	</nav>
 
 
-<?php if ( have_posts() ) { ?>
-	<?php while ( have_posts() ) { ?>
 
 	
 
 	<div class="post_line"></div>
-
+		
 	<div class="post_container col-md-offset-3 col-md-10">
-		 
-
-		<?php the_post(); ?>
-		<div class="row">
-			<!-- <div class="col-md-4">
-				<span class="post_thumb"><?php the_post_thumbnail('site_post') ?></span>		
-			</div> -->
-				<div class="col-md-8">
-					<span class="post__title"><?php the_title() ?></span>
-					<time datetime="<?php the_time('Y-m-d') ?>"><?php the_time('d \d\e F \d\e Y') ?></time>		
-				</div>
-		</div>
-		<?php the_content() ?>
-
-	<?php } ?>
-<?php } else { ?>
-	<!-- Content -->
 
 
+<div id="gallery" class="gallery">
 	
-<?php } wp_reset_query(); ?>
 
-<?php get_sidebar() ?>
+</div>
+<a href="https://pixabay.com/">
+    <img src="https://pixabay.com/static/img/public/leaderboard_b.png" alt="Pixabay">
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>		 
+<script>	
+$(document).ready(function() {
+		$(function() {
+	$.ajax({
+		url: 'https://pixabay.com/api/?key=9899807-cdbbb74588ead133b8ce58ff7&q=yellow+flowers&image_type=photo',
+		
+		method: 'GET'
+	})
+	.then(function(data) {
+		console.log(data.hits[0].largeImageURL);
+		var imgurl = data.hits[0].largeImageURL
+		$('#gallery').prepend('<img id="theImg" src="'+ imgurl + '" />')
+	});
+
+});
+});
+
+</script>
+
+
+
+
 <?php get_footer() ?>		
 
 	</div>
