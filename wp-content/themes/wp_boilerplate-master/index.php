@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/alvarotrigo/pagePiling.js/master/jquery.pagepiling.css">
 <nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container">
 		<nav class="navbar">
@@ -94,7 +94,7 @@
 		<div class="section sec-projects" id="section-projects">
 			<div class="row">
 				<div class="col-md-offset-2 col-md-10">
-					<h1>/Proyectos</h1>
+					<h1>/Projects</h1>
 				</div>			
 				<div class="col-md-offset-1 col-md-10">
 
@@ -157,15 +157,15 @@
 					?>
 						
 				<!-- Content -->
-				<div class="blog-container">
-					<article class="blog">
+				<div class="project-container">
+					<article class="project">
 						<a href="<?php the_permalink() ?>">
 							<?php the_post_thumbnail('site_post', array('class' => 'blog__img')) ?>
-							<div class="blog__content">
+							<div class="project__content">
 								<div class="middle">
-									<div class="blog-text">
-										<h3 class="blog__title"> <?php the_title() ?> </h3>
-										<p class="blog__excerpt"><?php the_excerpt() ?></p>
+									<div class="project-text">
+										<h3 class="project__title"> <?php the_title() ?> </h3>
+										<p class="project__excerpt"><?php the_excerpt() ?></p>
 									</div>
 								</div>
 							</div>
@@ -183,7 +183,10 @@
 		</div>
 		<div class="section sec-contact" id="section-cntct">
 			<div class="col-md-offset-2 col-md-10">
-				<h1>/Contacto</h1>
+				<h1>/Contact</h1>
+			</div>
+			<div class="contact__form col-md-offset-5">	
+				<?php echo do_shortcode( '[contact-form-7 id="27" title="Contact Form"]' ); ?>				
 			</div>		
 		</div>
 	</div>

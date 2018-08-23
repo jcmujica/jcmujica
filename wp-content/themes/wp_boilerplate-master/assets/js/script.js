@@ -125,7 +125,7 @@ var TxtType = function(el, toRotate, period) {
         touchSensitivity: 5,
         keyboardScrolling: true,
         sectionSelector: '.section',
-        animateAnchor: false,
+        animateAnchor: true,
         //events
         onLeave: function(index, nextIndex, direction){
             //after leaving section 2

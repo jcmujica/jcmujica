@@ -1,9 +1,17 @@
+<?php add_filter('get_the_permalink','my_permalink_redirect');
+function my_permalink_redirect($permalink) {
+    global $post;
+    if ($post->ID == 15) {
+        $permalink = 'http://new-url.com/pagename';
+    }
+    return $permalink;
+} ?>
 <?php get_header() ?>
 
-<?php if ( have_posts() ) { ?>
-	<?php while ( have_posts() ) { ?>
 
-	<nav class="navbar navbar-default navbar-fixed-top">
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<nav class="navbar">
 				<div class="container-fluid">
@@ -33,16 +41,27 @@
 		</div>
 	</nav>
 
+
+<?php if ( have_posts() ) { ?>
+	<?php while ( have_posts() ) { ?>
+
+	
+
 	<div class="post_line"></div>
 
-	<div class="post_container col-md-offset-3 col-md-6">
+	<div class="post_container col-md-offset-3 col-md-10">
 		 
 
 		<?php the_post(); ?>
-
-		<div class="post_thumb"><?php the_post_thumbnail('site_post') ?></div>
-		<h1><?php the_title() ?></h1>
-		<time datetime="<?php the_time('Y-m-d') ?>"><?php the_time('d \d\e F \d\e Y') ?></time>
+		<div class="row">
+			<!-- <div class="col-md-4">
+				<span class="post_thumb"><?php the_post_thumbnail('site_post') ?></span>		
+			</div> -->
+				<div class="col-md-8">
+					<span class="post__title"><?php the_title() ?></span>
+					<time datetime="<?php the_time('Y-m-d') ?>"><?php the_time('d \d\e F \d\e Y') ?></time>		
+				</div>
+		</div>
 		<?php the_content() ?>
 
 	<?php } ?>

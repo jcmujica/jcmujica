@@ -144,10 +144,9 @@ div a {
    cursor: default;
 }
 
-p {
-	margin-top: 100px;
+.post_thumb {
+	float: left;
 }
-
 
 h1 {
 	margin-top: 15vh;
@@ -250,6 +249,7 @@ ul {
   transform: translate(-80%, -150%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  background-color: white;
 }
 
 .post_line {
@@ -259,6 +259,7 @@ ul {
 
 .post_container {
 	margin: 50px;
+	max-width: 100%;
 }
 
 .post_thumb {
@@ -296,13 +297,12 @@ ul {
 	color: #a6e22d;
 	font-style: bold;
 	text-decoration: none;
-	background-color: white;
-	opacity: 0.5;
+	opacity: 1;
 }
 
 .project__title:hover {
 	color: #a6e22d;
-	opacity: 1;
+	opacity: 2;
 }
 
 .about-section {
@@ -319,4 +319,18 @@ ul {
 
 .main-logo {
 	color: white;
+}
+
+.sec-contact p {
+	margin: 0;
+}
+
+.contact__form {
+
+}
+
+.post__title {
+	display: inline-block;
+	font-size: 60px;
+	font-weight: bold;
 }
