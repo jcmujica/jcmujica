@@ -22,11 +22,11 @@
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul id="myMenu" class="nav navbar-nav navbar-right">
-							<li><a id="nav-home" href="#goto-home">Home</a></li>
-							<li><a id="nav-about" href="#goto-about">About</a></li>
-							<li><a id="nav-projects" href="#goto-projects">Projects</a></li>
-							<li><a id="nav-blog" href="#goto-blg">Blog</a></li>
-							<li><a id="nav-contact" href="#goto-cntct">Contact</a></li>
+							<li><a id="nav-home" href="<?php home_url('') ?>#goto-home">Home</a></li>
+							<li><a id="nav-about" href="<?php get_home_url() ?>#goto-about">About</a></li>
+							<li><a id="nav-projects" href="<?php site_url() ?>#goto-projects">Projects</a></li>
+							<li><a id="nav-blog" href="#<?php bloginfo( 'template_url' ) ?>goto-blg">Blog</a></li>
+							<li><a id="nav-contact" href="<?php bloginfo( 'template_url' ) ?>#goto-cntct">Contact</a></li>
 						</ul>
 					</div>
 				</div>

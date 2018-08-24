@@ -258,8 +258,9 @@ ul {
 }
 
 .post_container {
-	margin: 50px;
+	padding: 50px;
 	max-width: 100%;
+	margin: auto;
 }
 
 .post_thumb {
@@ -330,7 +331,33 @@ ul {
 }
 
 .post__title {
-	display: inline-block;
+	display: block;
 	font-size: 60px;
 	font-weight: bold;
+}
+
+#gallery {
+	text-align: center;
+	max-width: 80%;
+	margin: auto;
+}
+
+.gallery__button {
+	margin: 10px auto;
+	padding: 20px;
+	text-align: center;
+	border: #282828 1px solid;
+	max-width: 60%;
+	font-size: 2em;
+}
+
+.ajax__gallery h1 {
+	margin-top: 0;
+}
+
+
+
+.pixabay img {
+	display: block;
+	margin: 0 auto;
 }

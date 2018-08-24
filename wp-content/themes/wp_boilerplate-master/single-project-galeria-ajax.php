@@ -40,40 +40,67 @@
 
 	<div class="post_line"></div>
 		
-	<div class="post_container col-md-offset-3 col-md-10">
+	<div class="post_container ajax__gallery">
+	<h1>Galería AJAX</h1>
+	<p>La galería en esta publicación está siendo insertada mediante el uso de AJAX y la API de Pixabay.com</p>
+
+	<div id="gallery" class="img-fluid"></div>
+	<div id="gallery__btn" class="gallery__button btn-success">Change Image</div>
 
 
-<div id="gallery" class="gallery">
+<!-- 	<a class="pixabay" href="https://pixabay.com/">
+	    <img id="theImg" src="https://pixabay.com/static/img/public/leaderboard_b.png" alt="Pixabay">
+	</a> -->
+
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>		 
+	<script>	
+		$(document).ready(function() {
+				var indice = 0;
+				$(function () {
+				$.ajax({
+				url: 'https://pixabay.com/api/?key=9899807-cdbbb74588ead133b8ce58ff7&q=mountain&image_type=photo',
+				method: 'GET'
+			})
+			.then(function(data) {
+				console.log(data);
+				var imgurl = data.hits[indice].webformatURL;
+				$('#gallery').prepend('<img id="theImg" src="'+ imgurl + '" />');
+			});
+
+		});
+
+				$('#gallery__btn').click(function(event) {
+					indice += 1;
+					if (indice == 20) {
+						indice = 0;
+					}
+					$(function() {
+						$.ajax({
+						url: 'https://pixabay.com/api/?key=9899807-cdbbb74588ead133b8ce58ff7&q=mountain&image_type=photo',
+						method: 'GET'
+						})
+						.then(function(data) {
+						d = new Date();
+						var imgurl = data.hits[indice].webformatURL;
+						console.log(imgurl);
+						$("#gallery img:last-child").remove()
+						$('#gallery').prepend('<img id="theImg" src="'+ imgurl + '" />');
+						});
+
+				});
+				});
+
+				
+		});
+	</script>
+
 	
-
-</div>
-<a href="https://pixabay.com/">
-    <img src="https://pixabay.com/static/img/public/leaderboard_b.png" alt="Pixabay">
-</a>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>		 
-<script>	
-$(document).ready(function() {
-		$(function() {
-	$.ajax({
-		url: 'https://pixabay.com/api/?key=9899807-cdbbb74588ead133b8ce58ff7&q=yellow+flowers&image_type=photo',
 		
-		method: 'GET'
-	})
-	.then(function(data) {
-		console.log(data.hits[0].largeImageURL);
-		var imgurl = data.hits[0].largeImageURL
-		$('#gallery').prepend('<img id="theImg" src="'+ imgurl + '" />')
-	});
-
-});
-});
-
-</script>
-
-
+	</div>
 
 
 <?php get_footer() ?>		
 
-	</div>
+	
