@@ -17,6 +17,7 @@
 		max-width: 200px;
 		max-height: 200px;
 	}
+	
 }
 
 @media (max-width: 440px) {
@@ -34,6 +35,9 @@
 	}
 	.project__excerpt p {
 		font-size: 0.7em;
+	}
+	.about-desc, .skill-list {
+		font-size: 0.7em;	
 	}
 }
 
@@ -381,7 +385,7 @@ ul {
 }
 
 label {
-	color: white;
+	color: #61c2e4;
 	font-weight: normal;
 }
 
@@ -391,12 +395,31 @@ label {
 	margin: 0 auto;
 }
 
-input[type="submit"]
+input[type="input"]
 {
     background-color: transparent;
-    color: #FFF;
-    width: 298px;
+    color: #61c2e4;
+    width: 310px;
     border: solid white 1px;
     margin: 10px 0;
     padding: 10px;
 }
+
+input, textarea {
+	background-color: transparent;
+	border: solid #61c2e4 2px;
+	padding: 10px;
+}
+
+input[type="submit"]
+{
+    background-color: transparent;
+    color: #61c2e4;
+    width: 298px;
+    border: solid #61c2e4 2px;
+    margin: 10px 0;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
