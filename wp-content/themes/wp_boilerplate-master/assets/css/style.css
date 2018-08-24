@@ -394,6 +394,9 @@ label {
 	margin: 0 auto;
 }
 
-.wpcf7-form-control .wpcf7-submit {
-	max-width: 20%;
+input[type="submit"]
+{
+    background-color: #fff;
+    color: #000;
+    width: 50%;
 }
