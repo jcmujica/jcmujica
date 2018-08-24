@@ -7,6 +7,37 @@
 	}
 }
 
+@media (max-width: 1160px) {
+	.thumbn img {
+		max-width: 200px;
+		max-height: 200px;
+	}
+
+	.project-container {
+		max-width: 200px;
+		max-height: 200px;
+	}
+}
+
+@media (max-width: 440px) {
+	.thumbn img {
+		max-width: 150px;
+		max-height: 150px;
+	}
+
+	.project-container {
+		max-width: 150px;
+		max-height: 150px;
+	}
+	.project__title {
+		font-size: 1em;
+	}
+	.project__excerpt p {
+		font-size: 0.7em;
+	}
+}
+
+
 @media (max-width: 517px) {
 	h1 a {
 		font-size: 0.6em;
@@ -54,7 +85,7 @@ body {
 }
 
 /* Definiendo colores para cada seccion */
-#nav-home:hover, #nav-home:focus  {
+ #nav-home:focus  {
     color: white;
     outline:0;
     font-weight: bold;
@@ -249,7 +280,7 @@ ul {
   transform: translate(-80%, -150%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .post_line {
@@ -263,9 +294,6 @@ ul {
 	margin: auto;
 }
 
-.post_thumb {
-
-}
 
 .project-container:hover .project__img {
   opacity: 0.3;
@@ -355,9 +383,17 @@ ul {
 	margin-top: 0;
 }
 
+label {
+	color: white;
+	font-weight: normal;
+}
 
 
 .pixabay img {
 	display: block;
 	margin: 0 auto;
+}
+
+.wpcf7-form-control .wpcf7-submit {
+	max-width: 20%;
 }

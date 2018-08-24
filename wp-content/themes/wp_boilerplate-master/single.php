@@ -42,7 +42,7 @@
 
 	<div class="post_line"></div>
 
-	<div class="post_container col-md-offset-3 col-md-10">
+	<div class="post_container">
 		 
 
 		<?php the_post(); ?>
@@ -64,8 +64,8 @@
 
 	
 <?php } wp_reset_query(); ?>
-
+</div>
 <?php get_sidebar() ?>
 <?php get_footer() ?>		
 
-	</div>
+	

@@ -49,7 +49,7 @@
 					<h1>/About me</h1>
 				</div>
 			</div>	
-			<div class="col-md-offset-2 col-md-3 col-sm-3">
+			<div class="col-md-offset-2 col-md-3 col-sm-3 col-xs-5">
 					<img class="about-image" src="<?php bloginfo( 'template_url' ) ?>/assets/images/avatar.svg" alt="">		
 			</div>
 				<div class="col-md-5">
@@ -114,12 +114,12 @@
 				<div class="project-container">
 					<article class="project">
 						<a href="<?php the_permalink() ?>">
-							<?php the_post_thumbnail('site_post', array('class' => 'project__img')) ?>
+							<div class="thumbn"><?php the_post_thumbnail('site_post', array('class' => 'project__img')) ?></div>
 							<div class="project__content">
 								<div class="middle">
 									<div class="project-text">
 										<h3 class="project__title"> <?php the_title() ?> </h3>
-										<p class="project__excerpt"><?php the_excerpt() ?></p>
+										<div class="project__excerpt"><?php the_excerpt() ?></div>
 									</div>
 								</div>
 							</div>
@@ -160,12 +160,12 @@
 				<div class="project-container">
 					<article class="project">
 						<a href="<?php the_permalink() ?>">
-							<?php the_post_thumbnail('site_post', array('class' => 'blog__img')) ?>
+							<span class="thumbn"><?php the_post_thumbnail('site_post', array('class' => 'blog__img')) ?></span>
 							<div class="project__content">
 								<div class="middle">
 									<div class="project-text">
 										<h3 class="project__title"> <?php the_title() ?> </h3>
-										<p class="project__excerpt"><?php the_excerpt() ?></p>
+										<div class="project__excerpt"><?php the_excerpt() ?></div>
 									</div>
 								</div>
 							</div>
