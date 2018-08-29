@@ -6,4 +6,4 @@ Además en el phpMyAdmin de nuestro localhost debemos importar la base de datos 
 
 Accedemos a localhost:8080 con los siguientes datos:
 Nombre de usuario: jcmujica
-contraseña: wOoySwjin4MrAFH(
+contraseña: jcmujica12345
